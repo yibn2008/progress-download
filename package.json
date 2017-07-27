@@ -1,0 +1,63 @@
+{
+  "name": "progress-download",
+  "version": "1.0.0",
+  "description": "download file with progress bar",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "standard --fix && npm-ensure -t deps",
+    "test": "npm run lint && npm run test-local",
+    "test-local": "mocha test/**/*.test.js",
+    "test-cov": "nyc npm run test-local",
+    "ci": "npm run lint && npm run test-cov",
+    "beta": "npm test && git release $npm_package_version && npm publish --tag beta",
+    "release": "npm test && npm-ensure -t changelog && git release $npm_package_version && npm publish",
+    "precommit": "standard && npm-ensure -t deps"
+  },
+  "bin": {
+    "download": "bin/download.js"
+  },
+  "ensure": {
+    "deps": {
+      "checkDirs": [
+        "lib/**/*",
+        "bin/*"
+      ]
+    }
+  },
+  "standard": {
+    "global": [
+      "describe",
+      "it",
+      "beforeEach",
+      "afterEach"
+    ],
+    "ignore": [
+      "/test"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "commander": "^2.11.0",
+    "debug": "^2.6.8",
+    "download": "^6.2.5",
+    "filesize": "^3.5.10",
+    "progress": "^2.0.0",
+    "rimraf": "^2.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "npm-ensure": "^1.0.0",
+    "husky": "0.x",
+    "nyc": "11.x",
+    "standard": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yibn2008/progress-download.git"
+  },
+  "keywords": [
+    "progress-download"
+  ],
+  "author": "zoujie.wzj",
+  "license": "ISC"
+}
