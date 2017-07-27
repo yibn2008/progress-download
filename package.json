@@ -39,7 +39,7 @@
     "chalk": "^2.0.1",
     "commander": "^2.11.0",
     "debug": "^2.6.8",
-    "download": "^6.2.5",
+    "download": "^5.0.3",
     "filesize": "^3.5.10",
     "progress": "^2.0.0",
     "rimraf": "^2.6.1"
