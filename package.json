@@ -1,6 +1,6 @@
 {
   "name": "progress-download",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "download file with progress bar",
   "main": "lib/index.js",
   "scripts": {
