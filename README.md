@@ -1,10 +1,10 @@
 # progress-download
 
-download file with progress bar
+download file with progress bar, support CLI and node API
 
 ## Screenshot
 
-
+![progress-download](https://user-images.githubusercontent.com/4136679/28660193-9d75827a-72e4-11e7-8eaf-d0a86f5ea398.gif)
 
 ## CLI
 
